@@ -6,6 +6,9 @@ export interface GetProjectsResponse extends GeneralResponse {
   projects: Array<
     Pick<ProjectEntity, "id" | "name" | "slug"> & {
       repositories: Array<Pick<RepositoryEntity, "id" | "owner" | "name">>;
+      contributorsCount: number;
+      activityCount: number;
+      score: number;
     }
   >;
 }
